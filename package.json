@@ -1,0 +1,22 @@
+{
+  "name": "teste-event-emitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pm2 start pm2.config.js",
+    "restart": "pm2 restart all",
+    "stop": "pm2 stop all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.5",
+    "pm2": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.5.13"
+  }
+}
