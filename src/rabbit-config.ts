@@ -24,15 +24,15 @@ function loadChannel(): Promise<void> {
                 reject(error0);
             }
 
-            connection.createChannel(function (error1, channel1) {
+            connection.createChannel(function (error1, ch) {
                 if (error1) {
                     reject(error1);
                 }
 
-                channel1.assertQueue(queue, { durable: false });
-                channel1.prefetch(1);
+                ch.assertQueue(queue, { durable: false });
+                ch.prefetch(1);
 
-                channel = channel1;
+                channel = ch;
                 resolve();
             });
 
